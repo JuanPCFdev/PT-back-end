@@ -1,0 +1,22 @@
+{
+  "name": "pruebatecnicabackend",
+  "version": "1.0.0",
+  "description": "back-end  para prueba tecnica",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JuanPCFdev/PT-back-end.git"
+  },
+  "author": "Juan Pablo Cuellar Florez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JuanPCFdev/PT-back-end/issues"
+  },
+  "homepage": "https://github.com/JuanPCFdev/PT-back-end#readme",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
