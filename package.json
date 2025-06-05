@@ -21,7 +21,10 @@
   },
   "homepage": "https://github.com/JuanPCFdev/PT-back-end#readme",
   "dependencies": {
-    "express": "^4.18.2",
-    "body-parser": "^1.20.2"
+    "body-parser": "^1.20.2",
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
   }
 }
