@@ -1,8 +1,10 @@
 // Importar las dependencias.
-const express = require('express');
-const bodyParser = require('body-parser');
-const config = require('./src/config/config');
-const authRoutes = require('./src/routes/authRoutes');
+const express = require('express'); // Importar express
+
+const bodyParser = require('body-parser'); // Importar body-parser
+
+const config = require('./src/config/config'); // Importar config
+const authRoutes = require('./src/routes/authRoutes'); // Importar authRoutes
 
 // Crear una instancia de Express
 const app = express();

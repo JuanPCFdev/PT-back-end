@@ -1,7 +1,7 @@
-const express = require('express');
-const router = express.Router();
-const { login } = require('../controllers/authController');
-const { validateLogin } = require('../middleware/validation');
+const express = require('express'); // Importar express
+const router = express.Router(); // Crear un router
+const { login } = require('../controllers/authController'); // Importar login
+const { validateLogin } = require('../middleware/validation'); // Importar validateLogin
 
 // Ruta para el login
 router.post('/login', validateLogin, login);

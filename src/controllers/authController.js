@@ -1,4 +1,4 @@
-const config = require('../config/config');
+const config = require('../config/config'); // Importar config
 
 // Controlador para el login
 const login = (req, res) => {
