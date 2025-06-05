@@ -28,8 +28,10 @@ app.use((req, res, next) => {
         console.log('Body:', req.body);
     }
 
+    const originalSend = res.send;
     // Capturar la respuesta
     res.send = function (body) {
+        const duration = Date.now() - start;
         console.log(`[${new Date().toISOString()}] Response Status: ${res.statusCode}`);
         if (body) {
             console.log('Response Body:', body);
