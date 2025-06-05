@@ -20,6 +20,32 @@ app.use((req, res, next) => {
     next();
 });
 
+// Middleware para logging
+app.use((req, res, next) => {
+    const start = Date.now();
+    
+    // Log de la petición entrante
+    console.log(`[${new Date().toISOString()}] ${req.method} ${req.url}`);
+    console.log('Headers:', req.headers);
+    if (req.body && Object.keys(req.body).length > 0) {
+        console.log('Body:', req.body);
+    }
+
+    // Capturar la respuesta
+    const originalSend = res.send;
+    res.send = function (body) {
+        const duration = Date.now() - start;
+        console.log(`[${new Date().toISOString()}] Response Status: ${res.statusCode}`);
+        console.log(`Response Time: ${duration}ms`);
+        if (body) {
+            console.log('Response Body:', body);
+        }
+        return originalSend.call(this, body);
+    };
+
+    next();
+});
+
 // Rutas
 app.use('/api', authRoutes);
 
